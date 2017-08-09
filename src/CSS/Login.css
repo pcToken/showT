@@ -1,0 +1,12 @@
+#loginForm{
+  position:absolute;
+  top:20%;
+}
+#col{
+  border-width: 0.1;
+  border:groove;
+  border-radius: 10px;
+}
+#loginBtn{
+  margin: 7px
+}
