@@ -1,0 +1,7 @@
+Link{
+  color: blue;
+  text-decoration: none; /* no underline */
+}
+#appBody{
+  position: absolute; width: 100% !important; height: 100% !important;
+}

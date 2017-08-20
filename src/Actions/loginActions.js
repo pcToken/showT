@@ -10,3 +10,16 @@ export function login(username, password){
     })
   })
 }
+export function saveUserInfo(username){
+  return({
+    type:types.SAVE_USER_INFO,
+    payload: {
+      username : username
+    }
+  })
+}
+export function logOut(){
+  return({
+    type:types.LOG_OUT,
+  })
+}

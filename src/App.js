@@ -1,10 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Switch, Route, Redirect, BrowserRouter as Router} from 'react-router-dom'
+import { Route, Redirect, BrowserRouter as Router} from 'react-router-dom'
 import Main from './Components/Main'
+import Routes from './Routes'
 import Login from './Components/Login'
+require("./CSS/App.css")
 
-function PrivateRoute ({component: Component, loggedIn, ...rest}) {
+function PrivateRoute ({component: Component, loggedIn,children, ...rest}) {
+  console.log("children:", children)
   return (
     <Route
       {...rest}
@@ -23,11 +26,10 @@ class App extends React.Component{
 	render(){
     return (
       <Router>
-      <div>
-      <Switch>
+      <div id="appBody">
       <Route exact path="/login" component={ Login } />
-      <PrivateRoute loggedIn={this.props.loggedIn} path='/' component={Main} />
-      </Switch>
+      <PrivateRoute loggedIn={this.props.loggedIn} path='/' component={Main}/>
+      { Routes }
       </div>
       </Router>
       );
@@ -36,7 +38,6 @@ class App extends React.Component{
 const mapStateToProps = (state) => {
   return {
     loggedIn: state.login.loggedIn,
-    loggingIn: state.login.loggingIn,
     loginError: state.login.loginError
   };
 }

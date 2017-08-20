@@ -6,8 +6,9 @@ export default function reducer(state={
 
   }, action){
   switch(action.type){
-    case types.LOG_IN:{
-      return({...state, username: action.login});
+    case types.SAVE_USER_INFO:{
+      localStorage.setItem('pcUsername', action.payload.username);
+      return({...state, username: action.payload.username});
     }
     case types.LOG_IN_PENDING:{
       return({...state, loggingIn:true});
@@ -17,7 +18,12 @@ export default function reducer(state={
     }
     case types.LOG_IN_FULFILLED:{
       localStorage.setItem('pcToken', action.payload.data.token);
-      return({...state, loggedIn:true, loggingIn: false, loginError: false, token : action.payload.data.token});
+      return({...state, loggedIn:true, loggingIn: false, loginError: false, token : action.payload.data.token, username : localStorage.getItem('pcUsername')});
+    }
+    case types.LOG_OUT:{
+      localStorage.removeItem("pcToken");
+      localStorage.removeItem("pcUsername");
+      return({...state, loggingIn:false, loggedIn : false, username: ""});
     }
     default:
     return state;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import { login } from '../Actions/loginActions.js'
+import { login, saveUserInfo } from '../Actions/loginActions.js'
 import {FormGroup, FormControl, ControlLabel, HelpBlock, Form, Button, Grid, Row, Col} from 'react-bootstrap'
 import "../CSS/Login.css"
 
@@ -91,7 +91,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    login: (username, password) => dispatch(login(username, password))
+    login: (username, password) => {
+      dispatch(login(username, password));
+      dispatch(saveUserInfo(username));
+    }
   };
 }
 

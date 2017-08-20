@@ -1,14 +1,31 @@
 import React from 'react'
-
+import { connect } from 'react-redux'
+import NavigationBar from './NavigationBar.js'
 class Main extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
   render(){
     return(
       <div>
-      <h1> MAIN </h1>
-      <button>Log out</button>
+        <NavigationBar username = {this.props.username}/>
+        {this.props.children}
       </div>
       );
   }
 }
 
-export default Main;
+const mapStateToProps = (state) => {
+  return {
+    loggedIn: state.login.loggedIn,
+    loginError: state.login.loginError,
+    username : state.login.username
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
