@@ -9,6 +9,7 @@ const mobileWidth = 390;
 // PROPS
 // menu : estructura del sidemenu en un arreglo de objetos json
 // currentSection : seccion actual del path en el que se encuentra, como este componente esta disenhado para ser usado como seccion principal de cada subdivision de la app(compras, ventas,etc) deberia estar justo en alguna subruta de la pagina principal ej: si currentSection"compras" en la url seria http://algo/compras para acceder a este componente
+// content: contenido que ira en la seccion de la derecha
 class mainContent extends React.Component{
   constructor(props){
     super(props);
@@ -42,7 +43,7 @@ class mainContent extends React.Component{
               this.props.history.push("/" + this.props.currentSection+ "/" + value);
             }}/>
           </Col>
-          <Col md={10} sm={9}>
+          <Col md={10} sm={9} style={{height:"100%"}}>
             { this.props.content }
           </Col>
         </Row>
@@ -51,4 +52,4 @@ class mainContent extends React.Component{
   }
 }
 
-export default withRouter(mainContent);
+export default withRouter( mainContent );

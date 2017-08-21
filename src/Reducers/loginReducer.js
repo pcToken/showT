@@ -1,4 +1,5 @@
 import * as types from "../ActionTypes/loginActionTypes.js"
+import axios from 'axios'
 export default function reducer(state={
     loggedIn: false,
     loggingIn:false,
@@ -18,6 +19,7 @@ export default function reducer(state={
     }
     case types.LOG_IN_FULFILLED:{
       localStorage.setItem('pcToken', action.payload.data.token);
+      axios.defaults.headers.common['authorization'] = "bearer " + action.payload.data.token;
       return({...state, loggedIn:true, loggingIn: false, loginError: false, token : action.payload.data.token, username : localStorage.getItem('pcUsername')});
     }
     case types.LOG_OUT:{

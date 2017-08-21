@@ -1,6 +1,8 @@
 import React from 'react';
 import MainContent from '../MainContent.js'
-
+import ContenidoCompras from "../../Routes/Compras/contentCompras.js"
+import "bootstrap/dist/css/bootstrap.css"
+import "jquery/dist/jquery.js"
 var menu = [
 {
   divider: true, label: 'Compras', value: 'main-nav'
@@ -13,7 +15,7 @@ var menu = [
     label:"Añadir", value:"solicitar/anhadir"
   },
   {
-    label:"Inicio", value:"solicitar"
+    label:"Listado", value:"solicitar"
   }
   ]
 },
@@ -32,6 +34,6 @@ var menu = [
 ];
 export default class Compras extends React.Component{
   render(){
-   return( <MainContent currentSection="compras" menu={menu}/>);
+   return( <MainContent currentSection="compras" menu={menu} content={ContenidoCompras} />);
   }
 }

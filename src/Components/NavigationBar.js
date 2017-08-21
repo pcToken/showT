@@ -30,6 +30,37 @@ class mainNavBar extends React.Component {
         <Nav>
           <LinkContainer to="/compras"><NavItem eventKey={1}>Compras</NavItem></LinkContainer>
         </Nav>
+
+
+
+
+        <Nav>
+          <LinkContainer to="/ventas"><NavItem eventKey={1}>Ventas</NavItem></LinkContainer>
+        </Nav>
+
+
+        <Nav>
+          <LinkContainer to="/almacen"><NavItem eventKey={1}>Almacen</NavItem></LinkContainer>
+        </Nav>
+
+
+        <Nav>
+          <LinkContainer to="/caja"><NavItem eventKey={1}>Caja</NavItem></LinkContainer>
+        </Nav>
+
+        <Nav>
+          <LinkContainer to="/personal"><NavItem eventKey={1}>Personal</NavItem></LinkContainer>
+        </Nav>
+
+        <Nav>
+          <LinkContainer to="/administrar"><NavItem eventKey={1}>Administrar</NavItem></LinkContainer>
+        </Nav>
+
+        <Nav>
+          <LinkContainer to="/analisis"><NavItem eventKey={1}>Analisis</NavItem></LinkContainer>
+        </Nav>
+
+
         <Nav pullRight>
           <NavItem eventKey={1} href="#">{this.props.username}</NavItem>
           <NavDropdown eventKey={3} title=""  id="basic-nav-dropdown">
