@@ -13,6 +13,16 @@ export default function reducer(state={
     case types.LIST_COMPRAS_FULFILLED:{
       return({...state, data: action.payload.data })
     }
+
+    case types.ADD_COMPRA_PENDING:{
+      return state;
+    }
+    case types.ADD_COMPRA_REJECTED:{
+      return state;
+    }
+    case types.ADD_COMPRA_FULFILLED:{
+      return state;
+    }
     default:
     return state;
   }
