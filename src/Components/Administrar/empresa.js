@@ -8,44 +8,38 @@ import { listCompras } from "../../Actions/comprasActions.js"
 import {Button,Grid,Col,Row,FormGroup,InputGroup,FormControl,DropdownButton,MenuItem
   ,ControlLabel,DateTimeField} from 'react-bootstrap'
 
-const COL_WIDTH = "160px"
+  const COL_WIDTH = "160px"
 
-class Empresa extends React.Component{
-  constructor(props){
-    super(props);
-  }
-  componentDidMount(){
+  class Empresa extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    componentDidMount(){
 
-  }
-  render(){
-    return(
+    }
+    render(){
+      return(
 
-      <div>
+        <div>
         
-        <Grid>
-              
-              <Row >
-                
-                  <Col>
-                      <h1>Gestionar Empresa</h1>
-                  </Col>
-              </Row>
         
-        </Grid>
+        <h1>Gestionar Empresa</h1>
+        <p>Testig paragrah</p>
+        
 
-      </div>
+        </div>
 
-      );
+        );
+    }
   }
-}
 
-const mapStateToProps = (state) => {
-  return;
-}
+  const mapStateToProps = (state) => {
+    return;
+  }
 
-const mapDispatchToProps = (dispatch) => {
-  return ;
-}
+  const mapDispatchToProps = (dispatch) => {
+    return ;
+  }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Empresa);
+  export default connect(mapStateToProps, mapDispatchToProps)(Empresa);
 
