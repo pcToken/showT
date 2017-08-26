@@ -151,7 +151,7 @@ class anhadirCompra extends React.Component{
           </Grid>
         </TabPanel>
         <TabPanel>
-        <h2>Hola Mundo</h2>
+        <h2>Hola DIEGO</h2>
         </TabPanel>
         </Tabs>
         </Form>
