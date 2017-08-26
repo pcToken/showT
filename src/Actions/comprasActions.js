@@ -1,6 +1,5 @@
 import * as types from "../ActionTypes/comprasActionTypes.js"
 import axios from 'axios'
-import { baseUrl } from "./constants.js"
 // devuelve todas las compras
 export function listCompras(){
   return({

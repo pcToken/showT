@@ -9,9 +9,6 @@ import { listCompras } from "../../Actions/comprasActions.js"
 const COL_WIDTH = "160px"
 
 class Listado extends React.Component{
-  constructor(props){
-    super(props);
-  }
   componentDidMount(){
     this.props.listCompras();
   }

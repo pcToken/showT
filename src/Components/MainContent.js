@@ -36,14 +36,14 @@ class mainContent extends React.Component{
   }
   render(){
     return(
-      <Grid id="contentSection" style={{marginTop:-20}}>
+      <Grid id="contentSection" style={{marginTop:-20, width:"100%"}}>
         <Row style={{height:"100%"}}>
           <Col md={2} sm={3} style={this.state.mobile? {margin:0,padding:0}:{height:"100%",margin:0,padding:0}}>
             <SideMenu theme="custom" items={this.props.menu} onMenuItemClick={(value)=>{
               this.props.history.push("/" + this.props.currentSection+ "/" + value);
             }}/>
           </Col>
-          <Col md={10} sm={9} style={{margin:0,padding:0,height:"100%"}}>
+          <Col md={10} sm={9} style={{margin:0,padding:20,height:"100%"}}>
             { this.props.content }
           </Col>
         </Row>

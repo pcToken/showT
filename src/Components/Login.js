@@ -93,7 +93,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     login: (username, password) => {
       dispatch(login(username, password));
-      dispatch(saveUserInfo(username));
+      dispatch(saveUserInfo("CT-" + username, username));
     }
   };
 }

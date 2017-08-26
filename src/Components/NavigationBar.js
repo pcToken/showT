@@ -19,7 +19,7 @@ class mainNavBar extends React.Component {
     return(
     <Navbar inverse collapseOnSelect className="ContainerFluid" style={{backgroundColor:'black'}}>
       <Navbar.Header>
-      <img src={logo} style={{width:50, marginTop:3}}/>
+      <img alt = "logo" src={logo} style={{width:50, marginTop:3}}/>
         <Navbar.Brand>
           <Link to="/">Casa del Tenis</Link>
         </Navbar.Brand>

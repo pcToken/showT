@@ -1,5 +1,5 @@
 import React from "react"
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Listado from '../../Components/Compras/listado.js'
 import AnhadirCompra from "../../Components/Compras/anhadirCompra.js"
 export default (
